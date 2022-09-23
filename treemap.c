@@ -88,7 +88,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
           return auxiliar->pair;
         }
     }
-    return NULL;
 }
 
 
