@@ -97,16 +97,16 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 
 Pair * searchTreeMap(TreeMap * tree, void* key) {
-  TreeNode* auxiliar = tree->root;
-    while (auxiliar != NULL){
-        if (tree->lower_than(key, auxiliar->pair->key) == 1){
-          auxiliar = auxiliar->left;
+  TreeNode* aux = tree->root;
+    while (aux != NULL){
+        if (tree->lower_than(key, aux->pair->key) == 1){
+          aux = aux->left;
         } 
-        else if (tree->lower_than(auxiliar->pair->key, key) == 1){
-          auxiliar = auxiliar->right;
+        else if (tree->lower_than(aux->pair->key, key) == 1){
+          aux = aux->right;
         }else{
-          tree->current= auxiliar;
-          return auxiliar->pair;
+          tree->current= aux;
+          return aux->pair;
         }
     }
   return NULL;
@@ -119,8 +119,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
 
 Pair * firstTreeMap(TreeMap * tree) {
   TreeNode* aux= minimum(tree->root);
-    Pair* min= aux->pair;
-    return min;
+  Pair* min= aux->pair;
+  return min;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
