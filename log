@@ -170,3 +170,13 @@ treemap.c:58:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 fe29265
+Fri 23 Sep 2022 06:07:15 PM UTC: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+treemap.c: In function ‘minimum’:
+treemap.c:59:1: error: expected ‘;’ before ‘}’ token
+   59 | }
+      | ^
+Compilation failed
+f96d30d

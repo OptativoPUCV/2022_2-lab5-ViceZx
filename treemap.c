@@ -55,6 +55,7 @@ TreeNode * minimum(TreeNode * x){
     x = aux->left;
     return x;
   }
+  return NULL
 }
 
 
