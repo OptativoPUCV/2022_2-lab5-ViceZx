@@ -142,3 +142,20 @@ Fri 23 Sep 2022 06:05:13 PM UTC:
  tests:  11|6
 total_score: 15/70
 2f4ed75
+Fri 23 Sep 2022 06:06:30 PM UTC: 
+ treemap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘minimum’:
+treemap.c:53:19: error: initialization of ‘TreeMap *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+   53 |   TreeMap * aux = x;
+      |                   ^
+treemap.c:54:12: error: ‘TreeMap’ has no member named ‘left’
+   54 |   while(aux->left != NULL){
+      |            ^~
+treemap.c:55:12: error: ‘TreeMap’ has no member named ‘left’
+   55 |     x = aux->left;
+      |            ^~
+cc1: all warnings being treated as errors
+Compilation failed
+f9d15de
